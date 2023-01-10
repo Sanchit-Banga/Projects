@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="7dp"
+
+        >
+
+    <TextView
+        android:id="@+id/act1title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="CS-Calculator"
+        android:textAlignment="center"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="5dp"
+        android:layout_marginEnd="5dp"
+        android:background="#2CBBF4"
+        android:textSize="30sp"
+        android:textStyle="bold"
+    />
+
+
+    <EditText
+        android:id="@+id/act1screen1"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginStart="24dp"
+        android:layout_marginTop="50dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act1title"
+        app:layout_constraintStart_toEndOf="@id/act1midoperator"
+        android:hint="NO.1"
+        android:textAlignment="center"
+        android:background="#C8C9CA"
+
+        />
+
+    <TextView
+        android:id="@+id/act1midoperator"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="96dp"
+        android:gravity="center"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textStyle="bold"
+        android:textSize="15dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:background="#C8C9CA"
+        app:layout_constraintTop_toBottomOf="@+id/act1title" />
+
+    <EditText
+        android:id="@+id/act1screen2"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginEnd="20dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:hint="No.2"
+        android:background="#C8C9CA"
+        android:textAlignment="center"
+        app:layout_constraintHorizontal_bias="1.0"
+        app:layout_constraintStart_toStartOf="@id/act1midoperator"
+        app:layout_constraintStart_toEndOf="@id/act1midoperator"
+        app:layout_constraintTop_toBottomOf="@+id/act1title" />
+
+    <TextView
+        android:id="@+id/act1result"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="35dp"
+        android:layout_marginEnd="5dp"
+        android:background="#7EED82"
+        android:gravity="center"
+        android:hint="Result"
+        android:minHeight="70dp"
+        android:textColor="#B50828"
+        android:textColorHint="#2E7D32"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+
+        app:layout_constraintTop_toBottomOf="@+id/act1screen1" />
+
+    <TextView
+        android:id="@+id/act1instruct"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/act1result"
+        android:layout_marginTop="25dp"
+        android:text="Pls select any of the one operators :"
+        android:textStyle="bold"
+        android:textSize="26dp"
+        android:textAlignment="center"
+    />
+
+    <Button
+        android:id="@+id/act1btnclr"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@+id/act1instruct"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        android:text="CE"
+        app:cornerRadius="20dp"
+        />
+
+    <Button
+        android:id="@+id/act1btnplus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="+"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/act1instruct"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/act1btnminus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="-"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/act1instruct"
+        android:layout_marginTop="40dp"
+        android:layout_marginEnd="30dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+
+    <Button
+        android:id="@+id/act1btndiv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="/"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/act1btnclr"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+
+    <Button
+        android:id="@+id/act1btnrem"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="%"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/act1btnclr"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/act1btnmul"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="*"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/act1btnclr"
+        android:layout_marginTop="40dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="30dp"
+        />
+
+    <Button
+        android:id="@+id/act1btnpow"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="pow"
+        app:cornerRadius="20dp"
+        app:layout_constraintTop_toBottomOf="@id/act1btndiv"
+        android:layout_marginTop="40dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="30dp"
+        />
+
+
+    <Button
+        android:id="@+id/act1btnlog"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="log10"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/act1btnrem"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+
+    <Button
+        android:id="@+id/act1btnabs"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="abs"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/act1btnrem"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="30dp"
+        />
+
+    <Button
+        android:id="@+id/act1btnxor"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xor"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/act1btnpow"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+
+        />
+
+    <Button
+        android:id="@+id/act1btnlshift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="shl"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/act1btnlog"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+
+        />
+
+    <Button
+        android:id="@+id/act1btnrshift"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="shr"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="40dp"
+        app:layout_constraintTop_toBottomOf="@id/act1btnabs"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="30dp"
+        />
+
+    <Button
+        android:id="@+id/act1btnshow"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Contributed By"
+        app:cornerRadius="20dp"
+        android:layout_marginTop="35dp"
+        app:layout_constraintTop_toBottomOf="@id/act1btnlshift"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="30dp"
+        android:layout_marginStart="30dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:backgroundTint="#EDD60D"
+        />
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</ScrollView>
